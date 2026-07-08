@@ -26,31 +26,3 @@ a{color:inherit;text-decoration:none}
 .suporte-hero{grid-template-columns:1.1fr .65fr}.passos{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}.passo{border-radius:24px;padding:26px;position:relative}.passo.importante{border-color:rgba(167,207,43,.5);background:linear-gradient(180deg,rgba(167,207,43,.12),rgba(12,15,12,.92))}.numero{width:42px;height:42px;border-radius:14px;background:var(--verde);color:#11170b;display:flex;align-items:center;justify-content:center;font-weight:900;margin-bottom:18px}.passo h3{font-size:21px;margin-bottom:10px}.obs{margin-top:10px;color:#e6efd8;font-size:15px}.aviso h2{margin-bottom:14px}.faq{max-width:1050px;margin:auto}.faq details{padding:22px 26px;border-radius:18px;margin-bottom:14px}.faq summary{font-weight:800;cursor:pointer}.faq p{margin-top:14px}.whatsapp{position:fixed;right:26px;bottom:26px;width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,#25d366,#129c47);display:flex;align-items:center;justify-content:center;font-size:28px;color:white;z-index:11;box-shadow:0 16px 45px rgba(37,211,102,.25)}footer{text-align:center;padding:32px 7%;border-top:1px solid var(--borda);background:#070907}.reveal{opacity:0;transform:translateY(20px);transition:.7s ease}.reveal.visivel{opacity:1;transform:translateY(0)}
 @media(max-width:980px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.passos{grid-template-columns:1fr 1fr}.destaque-remoto{flex-direction:column;align-items:flex-start}.contato-grid{grid-template-columns:1fr}.menu{display:none}}
 @media(max-width:640px){.topo{height:76px;padding:0 5%}.marca img{width:48px;height:48px}.marca strong{font-size:20px}.marca span{font-size:10px}.hero{padding:110px 5% 60px}.secao{padding:70px 5%}.grid,.passos{grid-template-columns:1fr}.acoes{flex-direction:column}.btn{width:100%}.painel-status,.painel-download{padding:22px}.destaque-remoto,.sobre,.contato,.aviso{padding:28px}.whatsapp{width:56px;height:56px;right:18px;bottom:18px}}
-
-/* Partículas discretas no fundo */
-#particles-bg{
-  position:fixed;
-  inset:0;
-  width:100%;
-  height:100%;
-  z-index:-1;
-  pointer-events:none;
-  background:transparent;
-}
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  z-index:-2;
-  background:var(--fundo);
-}
-.horario{
-  margin-top:12px;
-  color:#e6efd8;
-  font-weight:600;
-}
-.footer-horario{
-  margin-top:8px;
-  font-size:14px;
-  color:var(--muted);
-}

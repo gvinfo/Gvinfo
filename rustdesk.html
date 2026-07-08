@@ -5,11 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Acesso Remoto | GV Info</title>
   <meta name="description" content="Tutorial simples para baixar, executar e usar o RustDesk com a GV Info." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="GV Info" />
+  <meta property="og:title" content="Acesso remoto | GV Info" />
+  <meta property="og:description" content="Baixe o RustDesk e receba suporte remoto seguro da GV Info com autorização do cliente." />
+  <meta property="og:image" content="imagens/og-gvinfo.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Acesso remoto | GV Info" />
+  <meta name="twitter:description" content="Baixe o RustDesk e receba suporte remoto seguro da GV Info com autorização do cliente." />
+  <meta name="twitter:image" content="imagens/og-gvinfo.png" />
+  <meta name="theme-color" content="#101820" />
   <link rel="icon" href="imagens/favicon.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <canvas id="particles-bg" aria-hidden="true"></canvas>
   <header class="topo">
     <a class="marca" href="index.html" aria-label="GV Info">
       <img src="imagens/logo-gv.png" alt="Logo GV Info" />
@@ -33,7 +45,7 @@
         <h1>Baixe o RustDesk e receba atendimento da GV Info.</h1>
         <p>O acesso remoto só acontece com sua autorização. Você pode encerrar a sessão a qualquer momento.</p>
         <div class="acoes">
-          <a class="btn btn-principal" href="https://github.com/rustdesk/rustdesk/releases/download/1.4.9/rustdesk-1.4.9-x86_64.exe">Baixar RustDesk para Windows</a>
+          <a class="btn btn-principal" href="https://github.com/rustdesk/rustdesk/releases/download/1.4.9/rustdesk-1.4.9-x86_64.exe" data-rustdesk-download>Baixar RustDesk para Windows</a>
           <a class="btn btn-secundario" href="#tutorial">Ver passo a passo</a>
         </div>
       </div>
@@ -56,13 +68,13 @@
           <div class="numero">1</div>
           <h3>Clique em “Baixar RustDesk”</h3>
           <p>O download será iniciado diretamente pelo GitHub, que é a página oficial onde o RustDesk publica seus arquivos.</p>
-          <a class="btn btn-mini" href="https://github.com/rustdesk/rustdesk/releases/download/1.4.9/rustdesk-1.4.9-x86_64.exe">Baixar agora</a>
+          <a class="btn btn-mini" href="https://github.com/rustdesk/rustdesk/releases/download/1.4.9/rustdesk-1.4.9-x86_64.exe" data-rustdesk-download>Baixar agora</a>
         </article>
 
         <article class="passo reveal">
           <div class="numero">2</div>
           <h3>Abra o arquivo baixado</h3>
-          <p>Normalmente ele fica na pasta <strong>Downloads</strong>. O arquivo terá um nome parecido com <strong>rustdesk-1.4.9-x86_64.exe</strong>.</p>
+          <p>Normalmente ele fica na pasta <strong>Downloads</strong>. O arquivo terá um nome parecido com <strong>rustdesk-versao-atual-x86_64.exe</strong>.</p>
         </article>
 
         <article class="passo reveal importante">
@@ -124,7 +136,6 @@
 
   <footer>
     <p>GV Info © 2026 — Suporte remoto com RustDesk</p>
-    <p class="footer-horario">Atendimento: segunda a sábado, das 9h às 18h.</p>
   </footer>
 
   <script src="script.js"></script>
