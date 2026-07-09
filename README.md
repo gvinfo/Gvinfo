@@ -1,12 +1,31 @@
-# GV Info
+# GV Info — Site institucional
 
-Site estático pronto para GitHub Pages.
+Versão definitiva baseada na identidade aprovada da GV Info.
 
-Alterações realizadas nesta versão:
+## Conteúdo
 
-- Mantido o layout original.
-- Corrigido o download do RustDesk para buscar automaticamente o instalador Windows x64 mais recente pela API oficial de releases do GitHub.
-- Adicionada imagem limpa de compartilhamento para WhatsApp/Open Graph em `imagens/og-gvinfo.png`.
-- Adicionadas meta tags Open Graph e Twitter Card em `index.html` e `rustdesk.html`.
+- Página inicial
+- Página de acesso remoto com AeroAdmin (`acesso-remoto.html`; o arquivo `rustdesk.html` redireciona para compatibilidade)
+- Tutorial simples de uso do AeroAdmin
+- WhatsApp integrado
+- Horário de atendimento: segunda a sábado, das 09:00 às 18:00
+- Open Graph para WhatsApp
+- Twitter Card
+- Favicon, Apple Touch Icon e Manifest PWA
 
-Observação: após publicar no GitHub Pages, o WhatsApp pode demorar alguns minutos para atualizar a prévia do link por causa do cache.
+## Download AeroAdmin
+
+O botão aponta para a página oficial de download do AeroAdmin em português. O link direto `AeroAdmin.exe` do provedor foi testado e pode redirecionar/ficar indisponível; por isso esta versão usa a página oficial para evitar botão quebrado.
+
+## Publicação no GitHub Pages
+
+Envie todos os arquivos deste projeto para a raiz do repositório e ative o GitHub Pages em `Settings > Pages`.
+
+
+## Atualização final
+- Download direto do AeroAdmin pelo arquivo local `downloads/AeroAdmin.exe`.
+- Logo atualizada com PNG limpo/recortado e ícones recriados.
+- Ícone do WhatsApp substituído por SVG padrão.
+
+
+Atualização: logo com tipografia oficial aplicada no header, favicon, ícones e Open Graph. Download direto do AeroAdmin mantido em downloads/AeroAdmin.exe.
