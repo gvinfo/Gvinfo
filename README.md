@@ -44,3 +44,10 @@ O teste de velocidade agora aparece em destaque na página inicial, com botão n
 ## Atualização
 - Banner chamativo do teste de velocidade destacado na área principal do site.
 - Removido o botão extra anterior de teste na hero.
+
+
+## Atualização
+
+- Teste de velocidade integrado diretamente na página inicial (`index.html`).
+- Menu e banner apontam para `#teste-velocidade`, sem redirecionar para subpágina.
+- Textos menores ajustados para melhor leitura.

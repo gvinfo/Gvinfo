@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GV Info | Soluções Inteligentes em Tecnologia</title>
-  <meta name="description" content="GV Info: manutenção de computadores, suporte remoto com AeroAdmin, consultoria em TI e soluções tecnológicas em Porto Alegre/RS." />
+  <meta name="description" content="GV Info: manutenção de computadores, suporte remoto com AeroAdmin, teste de velocidade de internet, consultoria em TI e soluções tecnológicas em Porto Alegre/RS." />
   <link rel="icon" href="imagens/favicon.png" />
   <link rel="apple-touch-icon" href="imagens/apple-touch-icon.png" />
   <link rel="manifest" href="manifest.webmanifest" />
@@ -40,7 +40,7 @@
     <nav class="menu">
       <a href="#servicos">Serviços</a>
       <a href="acesso-remoto.html">Acesso Remoto</a>
-      <a class="menu-destaque" href="velocidade.html">Teste de Velocidade</a>
+      <a class="menu-destaque" href="#teste-velocidade">Teste de Velocidade</a>
       <a href="#sobre">Sobre</a>
       <a href="#contato">Contato</a>
     </nav>
@@ -57,9 +57,46 @@
           <a class="btn btn-secundario" href="acesso-remoto.html">Acesso remoto</a>
         </div>
       </div>
-      <a class="banner-velocidade reveal" href="velocidade.html" aria-label="Abrir teste de velocidade da internet">
-        <img src="imagens/banner-teste-velocidade.png" alt="Teste sua velocidade de internet com a GV Info" loading="eager" />
-      </a>
+      <section id="teste-velocidade" class="hero-speed-test reveal" aria-labelledby="titulo-teste-home">
+        <div class="speed-card hero-speed-card" aria-live="polite">
+          <div class="speed-header">
+            <img src="imagens/logo-symbol.png" alt="" />
+            <div>
+              <span class="speed-kicker">Ferramenta gratuita</span>
+              <strong id="titulo-teste-home">Teste sua internet</strong>
+              <span id="speedStatus">Pronto para iniciar</span>
+            </div>
+          </div>
+
+          <div class="gauge" style="--angle:-130deg; --percent:0%">
+            <div class="gauge-scale"></div>
+            <div class="needle"></div>
+            <div class="gauge-center">
+              <strong id="speedValue">0</strong>
+              <span>Mbps</span>
+            </div>
+          </div>
+
+          <div class="speed-metrics">
+            <div><span>Download</span><strong id="downloadMetric">0 Mbps</strong></div>
+            <div><span>Ping aprox.</span><strong id="pingMetric">-- ms</strong></div>
+            <div><span>Estabilidade</span><strong id="stabilityMetric">--</strong></div>
+          </div>
+
+          <div class="chart-card hero-chart-card">
+            <canvas id="speedChart" width="960" height="260" aria-label="Gráfico de velocidade em tempo real"></canvas>
+          </div>
+
+          <div class="speed-diagnosis" id="speedDiagnosis">
+            Clique em <strong>Iniciar teste agora</strong> para analisar sua conexão.
+          </div>
+
+          <div class="speed-actions hero-speed-actions">
+            <button class="btn btn-principal" id="startSpeedTest" type="button">Iniciar teste agora</button>
+            <a class="btn btn-secundario" href="https://wa.me/5551993720996?text=Ol%C3%A1%2C%20fiz%20o%20teste%20de%20velocidade%20no%20site%20da%20GV%20Info%20e%20preciso%20de%20ajuda." target="_blank" rel="noopener">Enviar resultado</a>
+          </div>
+        </div>
+      </section>
     </section>
 
 
@@ -128,5 +165,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="speedtest.js"></script>
 </body>
 </html>
