@@ -29,3 +29,18 @@ Envie todos os arquivos deste projeto para a raiz do repositório e ative o GitH
 
 
 Atualização: logo com tipografia oficial aplicada no header, favicon, ícones e Open Graph. Download direto do AeroAdmin mantido em downloads/AeroAdmin.exe.
+
+
+## Teste de velocidade
+
+A página `velocidade.html` inclui a primeira versão do teste de velocidade GV Info, com velocímetro, gráfico em tempo real, download, ping aproximado e diagnóstico simples. Funciona sem backend usando o arquivo local `downloads/AeroAdmin.exe` como arquivo de teste.
+
+
+## Atualização
+
+O teste de velocidade agora aparece em destaque na página inicial, com botão no hero, destaque no menu e card visual com velocímetro/resumo.
+
+
+## Atualização
+- Banner chamativo do teste de velocidade destacado na área principal do site.
+- Removido o botão extra anterior de teste na hero.
