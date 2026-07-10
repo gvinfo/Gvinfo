@@ -57,43 +57,63 @@
           <a class="btn btn-secundario" href="acesso-remoto.html">Acesso remoto</a>
         </div>
       </div>
-      <section id="teste-velocidade" class="hero-speed-test reveal" aria-labelledby="titulo-teste-home">
-        <div class="speed-card hero-speed-card" aria-live="polite">
-          <div class="speed-header">
-            <img src="imagens/logo-symbol.png" alt="" />
-            <div>
-              <span class="speed-kicker">Ferramenta gratuita</span>
-              <strong id="titulo-teste-home">Teste sua internet</strong>
-              <span id="speedStatus">Pronto para iniciar</span>
+      <section id="teste-velocidade" class="hero-speed-test speedtest-pro reveal" aria-labelledby="titulo-teste-home">
+        <div class="speedtest-shell" aria-live="polite">
+          <div class="speedtest-topline">
+            <div class="speedtest-brand">
+              <img src="imagens/logo-symbol.png" alt="" />
+              <div>
+                <span>GV INFO SPEED</span>
+                <strong id="titulo-teste-home">Teste de velocidade</strong>
+              </div>
             </div>
+            <span class="speedtest-status" id="speedStatus">Pronto</span>
           </div>
 
-          <div class="gauge" style="--angle:-130deg; --percent:0%">
-            <div class="gauge-scale"></div>
-            <div class="needle"></div>
-            <div class="gauge-center">
-              <strong id="speedValue">0</strong>
-              <span>Mbps</span>
-            </div>
+          <div class="speedtest-summary">
+            <div><span>Ping</span><strong id="pingMetric">--</strong><small>ms</small></div>
+            <div><span>Download</span><strong id="downloadMetric">--</strong><small>Mbps</small></div>
+            <div><span>Estabilidade</span><strong id="stabilityMetric">--</strong><small>rede</small></div>
           </div>
 
-          <div class="speed-metrics">
-            <div><span>Download</span><strong id="downloadMetric">0 Mbps</strong></div>
-            <div><span>Ping aprox.</span><strong id="pingMetric">-- ms</strong></div>
-            <div><span>Estabilidade</span><strong id="stabilityMetric">--</strong></div>
+          <div class="speedtest-stage">
+            <svg class="speedtest-dial" viewBox="0 0 420 420" aria-hidden="true">
+              <defs>
+                <linearGradient id="speedGradient" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#7faf24"/>
+                  <stop offset="55%" stop-color="#b8ea36"/>
+                  <stop offset="100%" stop-color="#f4ffb2"/>
+                </linearGradient>
+                <filter id="speedGlow" x="-80%" y="-80%" width="260%" height="260%">
+                  <feGaussianBlur stdDeviation="7" result="blur"/>
+                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+              <circle class="dial-track" cx="210" cy="210" r="166"/>
+              <circle class="dial-progress" id="dialProgress" cx="210" cy="210" r="166"/>
+              <circle class="dial-inner" cx="210" cy="210" r="135"/>
+            </svg>
+
+            <button class="speedtest-go" id="startSpeedTest" type="button" aria-label="Iniciar teste de velocidade">
+              <span class="go-label">INICIAR</span>
+              <strong id="speedValue">GO</strong>
+              <small id="speedUnit">TESTE</small>
+            </button>
           </div>
 
-          <div class="chart-card hero-chart-card">
-            <canvas id="speedChart" width="960" height="260" aria-label="Gráfico de velocidade em tempo real"></canvas>
+          <div class="speedtest-live" id="speedLiveLabel">Clique em GO para começar</div>
+
+          <div class="speedtest-chart-wrap" id="speedChartWrap" hidden>
+            <canvas id="speedChart" width="960" height="220" aria-label="Gráfico de velocidade em tempo real"></canvas>
           </div>
 
-          <div class="speed-diagnosis" id="speedDiagnosis">
-            Clique em <strong>Iniciar teste agora</strong> para analisar sua conexão.
+          <div class="speed-diagnosis speedtest-diagnosis" id="speedDiagnosis">
+            Meça a qualidade da sua conexão sem sair do site.
           </div>
 
-          <div class="speed-actions hero-speed-actions">
-            <button class="btn btn-principal" id="startSpeedTest" type="button">Iniciar teste agora</button>
-            <a class="btn btn-secundario" href="https://wa.me/5551993720996?text=Ol%C3%A1%2C%20fiz%20o%20teste%20de%20velocidade%20no%20site%20da%20GV%20Info%20e%20preciso%20de%20ajuda." target="_blank" rel="noopener">Enviar resultado</a>
+          <div class="speedtest-footer-actions">
+            <button class="speedtest-link" id="rerunSpeedTest" type="button" hidden>Testar novamente</button>
+            <a class="speedtest-link" href="https://wa.me/5551993720996?text=Ol%C3%A1%2C%20fiz%20o%20teste%20de%20velocidade%20no%20site%20da%20GV%20Info%20e%20preciso%20de%20ajuda." target="_blank" rel="noopener">Preciso de ajuda</a>
           </div>
         </div>
       </section>
