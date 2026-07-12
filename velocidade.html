@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Teste de Velocidade | GV Info</title>
-  <meta name="description" content="Teste de velocidade de internet da GV Info com velocímetro, gráfico em tempo real, download, ping aproximado e estabilidade." />
+  <meta name="description" content="Teste de velocidade da GV Info com download, upload, ping, jitter, estabilidade e gráfico em tempo real." />
   <link rel="icon" href="imagens/favicon.png" />
   <link rel="apple-touch-icon" href="imagens/apple-touch-icon.png" />
   <link rel="manifest" href="manifest.webmanifest" />
@@ -39,7 +39,7 @@
       <div class="hero-conteudo reveal">
         <span class="etiqueta">Teste de velocidade</span>
         <h1>Confira sua internet antes do atendimento.</h1>
-        <p>O teste mede a velocidade de download, latência aproximada e estabilidade da conexão diretamente pelo navegador.</p>
+        <p>O teste mede download, upload, ping, jitter e estabilidade usando múltiplas conexões para obter um resultado mais confiável.</p>
         <div class="acoes">
           <button class="btn btn-principal" id="startSpeedTest">Iniciar teste</button>
           <a class="btn btn-secundario" href="https://wa.me/5551993720996?text=Ol%C3%A1%2C%20fiz%20o%20teste%20de%20velocidade%20no%20site%20da%20GV%20Info%20e%20preciso%20de%20ajuda." target="_blank" rel="noopener">Enviar resultado no WhatsApp</a>
@@ -64,9 +64,11 @@
           </div>
         </div>
 
-        <div class="speed-metrics">
-          <div><span>Download</span><strong id="downloadMetric">0 Mbps</strong></div>
-          <div><span>Ping aprox.</span><strong id="pingMetric">-- ms</strong></div>
+        <div class="speed-metrics speed-metrics-precision">
+          <div><span>Download</span><strong id="downloadMetric">-- Mbps</strong></div>
+          <div><span>Upload</span><strong id="uploadMetric">-- Mbps</strong></div>
+          <div><span>Ping</span><strong id="pingMetric">-- ms</strong></div>
+          <div><span>Jitter</span><strong id="jitterMetric">-- ms</strong></div>
           <div><span>Estabilidade</span><strong id="stabilityMetric">--</strong></div>
         </div>
       </div>
@@ -89,7 +91,7 @@
 
     <section class="secao aviso reveal">
       <h2>Observação importante</h2>
-      <p>Esta primeira versão mede principalmente download e latência aproximada. O resultado pode variar por Wi-Fi, distância do roteador, uso da rede e limites do GitHub Pages/CDN. Para diagnóstico técnico, envie o resultado para a GV Info.</p>
+      <p>O teste usa a rede global da Cloudflare e pode transferir aproximadamente 100 a 200 MB de dados. O resultado ainda pode variar conforme Wi-Fi, distância do roteador, navegador, outros aparelhos e uso simultâneo da conexão. Para maior confiabilidade, faça duas medições com os demais downloads pausados.</p>
     </section>
   </main>
 
