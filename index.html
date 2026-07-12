@@ -40,7 +40,7 @@
     <nav class="menu">
       <a href="#servicos">Serviços</a>
       <a href="acesso-remoto.html">Acesso Remoto</a>
-      <a class="menu-destaque" href="#teste-velocidade">Teste de Velocidade</a>
+      <a class="menu-destaque" href="#teste-velocidade">Diagnóstico da Conexão</a>
       <a href="#sobre">Sobre</a>
       <a href="#contato">Contato</a>
     </nav>
@@ -63,16 +63,16 @@
             <div class="speedtest-brand">
               <img src="imagens/logo-symbol.png" alt="" />
               <div>
-                <span>GV INFO SPEED</span>
-                <strong id="titulo-teste-home">Teste de velocidade</strong>
+                <span>GV INFO CONEXÃO</span>
+                <strong id="titulo-teste-home">Diagnóstico da conexão</strong>
               </div>
             </div>
             <span class="speedtest-status" id="speedStatus">Pronto</span>
           </div>
 
           <div class="speedtest-summary">
-            <div><span>Ping</span><strong id="pingMetric">--</strong><small>ms</small></div>
-            <div><span>Download</span><strong id="downloadMetric">--</strong><small>Mbps</small></div>
+            <div><span>Latência</span><strong id="pingMetric">--</strong><small>ms</small></div>
+            <div><span>Estimativa</span><strong id="downloadMetric">--</strong><small>Mbps</small></div>
             <div><span>Estabilidade</span><strong id="stabilityMetric">--</strong><small>rede</small></div>
           </div>
 
@@ -94,22 +94,24 @@
               <circle class="dial-inner" cx="210" cy="210" r="135"/>
             </svg>
 
-            <button class="speedtest-go" id="startSpeedTest" type="button" aria-label="Iniciar teste de velocidade">
+            <button class="speedtest-go" id="startSpeedTest" type="button" aria-label="Iniciar diagnóstico da conexão">
               <span class="go-label">INICIAR</span>
               <strong id="speedValue">GO</strong>
-              <small id="speedUnit">TESTE</small>
+              <small id="speedUnit">ANÁLISE</small>
             </button>
           </div>
 
-          <div class="speedtest-live" id="speedLiveLabel">Clique em GO para começar</div>
+          <div class="speedtest-live" id="speedLiveLabel">Clique em GO para analisar</div>
 
           <div class="speedtest-chart-wrap" id="speedChartWrap" hidden>
             <canvas id="speedChart" width="960" height="220" aria-label="Gráfico de velocidade em tempo real"></canvas>
           </div>
 
           <div class="speed-diagnosis speedtest-diagnosis" id="speedDiagnosis">
-            Meça a qualidade da sua conexão sem sair do site.
+            Analise a qualidade da conexão para acesso remoto, chamadas, streaming e jogos.
           </div>
+
+          <div class="connection-quality-grid" id="connectionQualityGrid" hidden></div>
 
           <div class="speedtest-footer-actions">
             <button class="speedtest-link" id="rerunSpeedTest" type="button" hidden>Testar novamente</button>
@@ -185,6 +187,6 @@
   </footer>
 
   <script src="script.js"></script>
-  <script src="speedtest-v5.js?v=5.0"></script>
+  <script src="connection-diagnostic.js?v=1.0"></script>
 </body>
 </html>

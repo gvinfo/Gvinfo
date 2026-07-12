@@ -6,20 +6,20 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <title>Teste de Velocidade | GV Info</title>
-  <meta name="description" content="Teste de velocidade da GV Info com download, upload, ping, jitter, estabilidade e gráfico em tempo real." />
+  <title>Diagnóstico da Conexão | GV Info</title>
+  <meta name="description" content="Diagnóstico da conexão da GV Info com latência, jitter, estabilidade e avaliação para acesso remoto, videochamadas, streaming e jogos." />
   <link rel="icon" href="imagens/favicon.png" />
   <link rel="apple-touch-icon" href="imagens/apple-touch-icon.png" />
   <link rel="manifest" href="manifest.webmanifest" />
   <meta name="theme-color" content="#060806" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Teste de Velocidade | GV Info" />
-  <meta property="og:description" content="Meça sua internet com o teste personalizado da GV Info." />
+  <meta property="og:title" content="Diagnóstico da Conexão | GV Info" />
+  <meta property="og:description" content="Analise a qualidade da sua conexão com o diagnóstico personalizado da GV Info." />
   <meta property="og:image" content="imagens/og-gvinfo.png" />
   <meta property="og:locale" content="pt_BR" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Teste de Velocidade | GV Info" />
-  <meta name="twitter:description" content="Velocímetro, gráfico em tempo real e diagnóstico simples da conexão." />
+  <meta name="twitter:title" content="Diagnóstico da Conexão | GV Info" />
+  <meta name="twitter:description" content="Latência, jitter, estabilidade e avaliação prática da conexão." />
   <meta name="twitter:image" content="imagens/og-gvinfo.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -40,11 +40,11 @@
   <main>
     <section class="hero velocidade-hero tech-bg">
       <div class="hero-conteudo reveal">
-        <span class="etiqueta">Teste de velocidade</span>
-        <h1>Confira sua internet antes do atendimento.</h1>
-        <p>O teste mede download, upload, ping, jitter e estabilidade usando conexões controladas por tempo limite para evitar travamentos.</p>
+        <span class="etiqueta">Diagnóstico da conexão</span>
+        <h1>Confira a qualidade da conexão antes do atendimento.</h1>
+        <p>A análise verifica latência, jitter, estabilidade e falhas de requisição, indicando se a conexão é adequada para acesso remoto, chamadas, streaming e jogos.</p>
         <div class="acoes">
-          <button class="btn btn-principal" id="startSpeedTest">Iniciar teste</button>
+          <button class="btn btn-principal" id="startSpeedTest">Iniciar diagnóstico</button>
           <a class="btn btn-secundario" href="https://wa.me/5551993720996?text=Ol%C3%A1%2C%20fiz%20o%20teste%20de%20velocidade%20no%20site%20da%20GV%20Info%20e%20preciso%20de%20ajuda." target="_blank" rel="noopener">Enviar resultado no WhatsApp</a>
         </div>
       </div>
@@ -54,7 +54,7 @@
           <img src="imagens/logo-symbol.png" alt="" />
           <div>
             <strong>GV Info Speed Test</strong>
-            <span id="speedStatus">Pronto para iniciar</span>
+            <span id="speedStatus">Pronto para analisar</span>
           </div>
         </div>
 
@@ -62,49 +62,47 @@
           <div class="gauge-scale"></div>
           <div class="needle"></div>
           <div class="gauge-center">
-            <strong id="speedValue">0</strong>
-            <span>Mbps</span>
+            <strong id="speedValue">GO</strong>
+            <span id="speedUnit">ANÁLISE</span>
           </div>
         </div>
 
         <div class="speed-metrics speed-metrics-precision">
-          <div><span>Download</span><strong id="downloadMetric">-- Mbps</strong></div>
-          <div><span>Upload</span><strong id="uploadMetric">-- Mbps</strong></div>
-          <div><span>Ping</span><strong id="pingMetric">-- ms</strong></div>
+          <div><span>Latência</span><strong id="pingMetric">-- ms</strong></div>
           <div><span>Jitter</span><strong id="jitterMetric">-- ms</strong></div>
+          <div><span>Estimativa</span><strong id="downloadMetric">-- Mbps</strong></div>
           <div><span>Estabilidade</span><strong id="stabilityMetric">--</strong></div>
+          <div><span>Status</span><strong>Online</strong></div>
         </div>
       </div>
     </section>
 
     <section class="secao speed-results reveal">
       <div class="titulo">
-        <span class="etiqueta">Gráfico em tempo real</span>
-        <h2>Desempenho durante o teste</h2>
+        <span class="etiqueta">Avaliação prática</span>
+        <h2>Para que sua conexão está adequada?</h2>
       </div>
 
-      <div class="chart-card">
-        <canvas id="speedChart" width="1200" height="360" aria-label="Gráfico de velocidade em tempo real"></canvas>
-      </div>
+      <div class="connection-quality-grid connection-quality-grid-page" id="connectionQualityGrid" hidden></div>
 
       <div class="speed-diagnosis" id="speedDiagnosis">
-        Clique em <strong>Iniciar teste</strong> para analisar sua conexão.
+        Clique em <strong>Iniciar diagnóstico</strong> para analisar sua conexão.
       </div>
     </section>
 
     <section class="secao aviso reveal">
       <h2>Observação importante</h2>
-      <p>O teste usa a rede global da Cloudflare e transfere aproximadamente 25 a 35 MB de dados por medição. O resultado ainda pode variar conforme Wi-Fi, distância do roteador, navegador, outros aparelhos e uso simultâneo da conexão. Para maior confiabilidade, faça duas medições com os demais downloads pausados.</p>
+      <p>Este diagnóstico não substitui um teste profissional de velocidade. Ele usa pequenas requisições ao próprio site e, quando disponível, a estimativa fornecida pelo navegador. O resultado serve para identificar latência, oscilações e falhas que podem prejudicar acesso remoto, chamadas, streaming e jogos.</p>
     </section>
   </main>
 
   <a class="whatsapp" href="https://wa.me/5551993720996?text=Ol%C3%A1%2C%20preciso%20de%20ajuda%20com%20minha%20internet." target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.02 3.2A12.68 12.68 0 0 0 5.12 22.32L3.2 28.8l6.64-1.84A12.7 12.7 0 1 0 16.02 3.2Zm0 2.35a10.35 10.35 0 0 1 8.8 15.8 10.31 10.31 0 0 1-13.9 3.48l-.47-.28-3.94 1.1 1.12-3.8-.3-.5a10.34 10.34 0 0 1 8.69-15.8Zm-4.6 5.38c-.24 0-.62.09-.94.44-.32.35-1.23 1.2-1.23 2.93s1.26 3.4 1.43 3.63c.18.23 2.43 3.9 6 5.31 2.97 1.17 3.58.94 4.22.88.64-.06 2.08-.85 2.37-1.67.29-.82.29-1.53.2-1.67-.08-.15-.32-.23-.67-.41-.35-.18-2.08-1.03-2.4-1.15-.32-.12-.55-.18-.79.18-.23.35-.9 1.15-1.11 1.38-.2.23-.41.26-.76.09-.35-.18-1.48-.55-2.82-1.74-1.04-.93-1.75-2.08-1.95-2.43-.2-.35-.02-.54.15-.71.16-.16.35-.41.53-.62.18-.2.23-.35.35-.58.12-.23.06-.44-.03-.62-.09-.18-.79-1.9-1.08-2.6-.28-.67-.57-.58-.79-.59h-.68Z"/></svg></a>
 
   <footer>
-    <p>GV Info © 2026 — Teste de velocidade e suporte técnico</p>
+    <p>GV Info © 2026 — Diagnóstico da conexão e suporte técnico</p>
   </footer>
 
   <script src="script.js"></script>
-  <script src="speedtest-v5.js?v=5.0"></script>
+  <script src="connection-diagnostic.js?v=1.0"></script>
 </body>
 </html>
