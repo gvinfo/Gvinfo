@@ -43,9 +43,9 @@
       <div class="hero-conteudo reveal">
         <span class="etiqueta">Suporte remoto autorizado</span>
         <h1>Baixe o AeroAdmin e receba atendimento da GV Info.</h1>
-        <p>O AeroAdmin não exige instalação para o atendimento pontual. Você executa o programa, informa o ID ao técnico e autoriza a conexão.</p>
+        <p>O AeroAdmin não exige instalação para o atendimento pontual. Você executa o programa, informa o ID e o PIN ao técnico e autoriza a conexão.</p>
         <div class="acoes">
-          <a class="btn btn-principal" href="downloads/AeroAdmin.exe" download download>Baixar AeroAdmin</a>
+          <a class="btn btn-principal" href="downloads/AeroAdmin.exe" download>Baixar AeroAdmin</a>
           <a class="btn btn-secundario" href="#tutorial">Ver passo a passo</a>
         </div>
       </div>
@@ -68,32 +68,34 @@
           <div class="numero">1</div>
           <h3>Clique em “Baixar AeroAdmin”</h3>
           <p>O download do AeroAdmin.exe será iniciado diretamente pelo site da GV Info, sem redirecionar para outra página.</p>
-          <a class="btn btn-mini" href="downloads/AeroAdmin.exe" download download>Baixar agora</a>
-        </article>
-
-        <article class="passo reveal">
-          <div class="numero">2</div>
-          <h3>Abra o arquivo baixado</h3>
-          <p>Normalmente ele fica na pasta <strong>Downloads</strong>. Procure pelo arquivo <strong>AeroAdmin.exe</strong>.</p>
+          <a class="btn btn-mini" href="downloads/AeroAdmin.exe" download>Baixar agora</a>
         </article>
 
         <article class="passo reveal importante">
+          <div class="numero">2</div>
+          <h3>Localize o arquivo e execute como administrador</h3>
+          <p>Após o download, localize o arquivo <strong>AeroAdmin.exe</strong> (normalmente fica na pasta <strong>“Downloads”</strong>), clique com o botão direito sobre ele e selecione <strong>“Executar como administrador”</strong>.</p>
+          <p class="obs">Se o Windows solicitar autorização, clique em <strong>Sim</strong>. Isso ajuda a evitar tela preta ou bloqueios durante o atendimento.</p>
+        </article>
+
+        <article class="passo passo-com-imagem reveal">
           <div class="numero">3</div>
-          <h3>Execute como administrador</h3>
-          <p>Clique com o botão direito no arquivo e escolha <strong>Executar como administrador</strong>. Se o Windows perguntar, clique em <strong>Sim</strong>.</p>
-          <p class="obs">Isso ajuda a evitar tela preta ou bloqueios quando surgirem janelas administrativas do Windows.</p>
-        </article>
-
-        <article class="passo reveal">
-          <div class="numero">4</div>
           <h3>Informe o ID e o PIN</h3>
-          <p>Na tela do AeroAdmin, informe ao técnico da GV Info o <strong>ID</strong> e o <strong>PIN</strong> exibidos no programa. Essas informações são necessárias para iniciar a conexão remota com segurança.</p>
+          <p>Na tela do AeroAdmin, informe ao técnico da GV Info o <strong>ID</strong> e o <strong>PIN</strong> destacados na imagem. Essas informações são necessárias para iniciar a conexão remota com segurança.</p>
+          <button class="tutorial-imagem" type="button" data-lightbox="imagens/tutorial/aeroadmin-id-pin.png" aria-label="Ampliar imagem mostrando o ID e o PIN no AeroAdmin">
+            <img src="imagens/tutorial/aeroadmin-id-pin.png" alt="Tela do AeroAdmin com o ID e o PIN destacados" loading="lazy" />
+            <span>Toque ou clique para ampliar</span>
+          </button>
         </article>
 
-        <article class="passo reveal">
-          <div class="numero">5</div>
-          <h3>Aceite a conexão</h3>
-          <p>Quando aparecer a solicitação de acesso, clique em <strong>Aceitar</strong>. O técnico só acessa após sua autorização.</p>
+        <article class="passo passo-com-imagem reveal">
+          <div class="numero">4</div>
+          <h3>Autorize a conexão</h3>
+          <p>Quando aparecer a solicitação, marque <strong>“Eu quero dar acesso ao meu computador”</strong> e clique em <strong>Aceitar</strong>. O técnico só acessa após sua autorização.</p>
+          <button class="tutorial-imagem" type="button" data-lightbox="imagens/tutorial/aeroadmin-aceitar.png" aria-label="Ampliar imagem mostrando como autorizar a conexão no AeroAdmin">
+            <img src="imagens/tutorial/aeroadmin-aceitar.png" alt="Janela do AeroAdmin com a opção de autorização e o botão Aceitar destacados" loading="lazy" />
+            <span>Toque ou clique para ampliar</span>
+          </button>
         </article>
       </div>
     </section>
@@ -132,6 +134,11 @@
       <a class="btn btn-principal" href="https://wa.me/5551993720996?text=Ol%C3%A1%2C%20preciso%20de%20ajuda%20para%20usar%20o%20AeroAdmin." target="_blank" rel="noopener">Chamar no WhatsApp</a>
     </section>
   </main>
+
+  <div class="lightbox-tutorial" id="tutorial-lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Imagem ampliada do tutorial">
+    <button class="lightbox-fechar" type="button" aria-label="Fechar imagem">×</button>
+    <img src="" alt="" />
+  </div>
 
   <a class="whatsapp" href="https://wa.me/5551993720996?text=Ol%C3%A1%2C%20preciso%20de%20suporte%20remoto%20com%20AeroAdmin." target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.02 3.2A12.68 12.68 0 0 0 5.12 22.32L3.2 28.8l6.64-1.84A12.7 12.7 0 1 0 16.02 3.2Zm0 2.35a10.35 10.35 0 0 1 8.8 15.8 10.31 10.31 0 0 1-13.9 3.48l-.47-.28-3.94 1.1 1.12-3.8-.3-.5a10.34 10.34 0 0 1 8.69-15.8Zm-4.6 5.38c-.24 0-.62.09-.94.44-.32.35-1.23 1.2-1.23 2.93s1.26 3.4 1.43 3.63c.18.23 2.43 3.9 6 5.31 2.97 1.17 3.58.94 4.22.88.64-.06 2.08-.85 2.37-1.67.29-.82.29-1.53.2-1.67-.08-.15-.32-.23-.67-.41-.35-.18-2.08-1.03-2.4-1.15-.32-.12-.55-.18-.79.18-.23.35-.9 1.15-1.11 1.38-.2.23-.41.26-.76.09-.35-.18-1.48-.55-2.82-1.74-1.04-.93-1.75-2.08-1.95-2.43-.2-.35-.02-.54.15-.71.16-.16.35-.41.53-.62.18-.2.23-.35.35-.58.12-.23.06-.44-.03-.62-.09-.18-.79-1.9-1.08-2.6-.28-.67-.57-.58-.79-.59h-.68Z"/></svg></a>
 
